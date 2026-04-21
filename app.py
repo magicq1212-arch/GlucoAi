@@ -4,7 +4,10 @@ import requests, os, random
 app = Flask(__name__)
 
 # ===== CONFIG =====
-API_KEY = "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"
+import os
+
+# ===== CONFIG =====
+API_KEY = os.getenv("GROQ_API_KEY")
 URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = "llama-3.1-8b-instant"
 
